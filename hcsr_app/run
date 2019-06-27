@@ -1,0 +1,8 @@
+rm -r build/
+mkdir build/
+cd build/
+cmake -DBOARD=galileo ..
+make
+cd zephyr
+cp zephyr.strip /media/smeet/ZEPHYR/kernel
+umount /dev/mmcblk0p1

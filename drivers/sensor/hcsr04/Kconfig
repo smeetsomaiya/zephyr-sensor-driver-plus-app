@@ -1,0 +1,49 @@
+# Kconfig - HCSR04 distance sensor configuration options
+
+#
+# Copyright (c) 2016 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig HCSR04
+	bool "HCSR04 Temperature and Humidity Sensor"
+	depends on GPIO
+	help
+	  Enable driver for HCSR04 ultrasonic distance sensors.
+
+if HCSR04
+
+config HCSR04_0
+	string "Driver name"
+	default "HCSR04_00"
+	help
+	  Device name with which the HCSR04 sensor is identified.
+
+config HCSR04_1
+	string "Driver name"
+	default "HCSR04_01"
+	help
+	  Device name with which the HCSR04 sensor is identified.
+
+config HCSR04_0_TRIG_PIN
+	int "Trigger pin IO number"
+	default 1
+
+config HCSR04_0_ECHO_PIN
+	int "Trigger pin IO number"
+	default 2
+
+config HCSR04_1_TRIG_PIN
+	int "Trigger pin IO number"
+	default 3
+
+config HCSR04_1_ECHO_PIN
+	int "Trigger pin IO number"
+	default 4
+
+config HCSR04_TIMEOUT
+	int "Timeout in ms if no echo received"
+	default 1000
+
+endif #HCSR04
