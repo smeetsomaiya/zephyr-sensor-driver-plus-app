@@ -1,5 +1,4 @@
-# zephyr-sensor-driver
-Thread Programming and Device driver in Zephyr RTOS Galileo Gen2
+# Thread Programming and Device driver in Zephyr RTOS Galileo Gen2
 
 ###########
 
